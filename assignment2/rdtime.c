@@ -14,9 +14,7 @@
  *     Current TSC value in CPU cycles.
  */
 static inline uint64_t read_tsc(void) {
-    _mm_lfence();
     uint64_t t = __rdtsc();
-    _mm_lfence();
     return t;
 }
 
